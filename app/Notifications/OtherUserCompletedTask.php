@@ -7,25 +7,34 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use App\Task;
+use App\User;
 
-class HighPriorityTaskAdded extends Notification
+class OtherUserCompletedTask extends Notification
 {
     use Queueable;
-
-/**
- * The task instance
- * @var \App\Task
- */
+    /**
+     * The task instance
+     *
+     * @var \App\Task
+     */
     protected $task;
 
     /**
-     * Create a new notification instance.
+     * The user who completed task
+     *
+     * @var \App\User
+     */
+    protected $completedBy;
+
+    /**
+     * Creates a new notification instance
      *
      * @return void
      */
-    public function __construct(Task $task)
+    public function __construct(Task $task, User $completedBy)
     {
         $this->task = $task;
+        $this->completedBy = $completedBy;
     }
 
     /**
@@ -48,9 +57,7 @@ class HighPriorityTaskAdded extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('A new task has been created called: ' . $this->task->title)
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                    ->line('Your task ' . $this->task->title . ' was completed by ' . $this->completedBy->name);
     }
 
     /**

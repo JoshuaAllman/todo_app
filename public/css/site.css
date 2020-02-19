@@ -1,0 +1,180 @@
+.nav-title {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 90px;
+    border-radius: 5px;
+}
+
+li.nav-item {
+    float: right;
+    list-style-type: none;
+}
+
+.nav-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-right: 20px;
+}
+
+.nav-item:hover {
+    background-color: #555;
+    color: black;
+}
+
+.task-form {
+    float: left;
+    padding: 14px 16px;
+}
+
+.add-task-button {
+    float: left;
+    padding: 6px 2px;
+    width: 85px;
+    margin-left: 8px;
+    font-size: 13px;
+    border: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    height: 34px;
+}
+
+.task-form label {
+    color: white;
+    float: left;
+    margin-top: -26px;
+    margin-left: 322px;
+}
+
+.task-form input[type="text"] {
+    background-color: white;
+    width: 190px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    border-radius: 3px;
+    box-shadow: none;
+    padding-bottom: 7px;
+    border-style: none;
+    font-size: 17px;
+    text-indent: 10px;
+    padding-top: 7px;
+    margin-bottom: -16px;
+}
+
+.displayed-task {
+    float: left;
+    display: inline-block red;
+    color: black;
+    background-color: white;
+    width: 100%;
+    padding-top: 5px;
+    list-style-type: none;
+}
+
+.complete-task-button {
+    color: white;
+    padding: 3px;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: green;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: none;
+    border-style: none;
+}
+
+input.form-control {
+    margin-bottom: 16px;
+    margin-top: 7px;
+    font-size: 22px;
+    text-indent: 15px;
+    letter-spacing: 1px;
+    width: 500px;
+    height: 41px;
+    position: relative;
+    left: 26%;
+    outline: none;
+}
+
+label.col-form-label {
+    color: black;
+    font-size: 16px;
+    font-family: raleway;
+    font font-weight: initial;
+    font-weight: 500;
+    margin-bottom: 16px;
+    font-size: 15px;
+    text-indent: 15px;
+    letter-spacing: 1px;
+    width: 500px;
+    height: 41px;
+    position: relative;
+    left: 26%;
+}
+
+div.card-header {
+    color: black;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    font-size: 30px;
+    font-family: raleway;
+    font-weight: 600;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 12%;
+    left: 52%;
+    margin-left: -100px;
+}
+
+div.card {
+    padding-top: 50px;
+    right: 104%;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    margin-top: -120px;
+    margin-left: -100px;
+}
+
+button.btn {
+    color: white;
+    background-color: green;
+    padding-top: 0px;
+    right: 100%;
+    width: 300px;
+    height: 50px;
+    position: fixed;
+    top: 30.5%;
+    left: 45.3%;
+    margin-top: 290px;
+    margin-left: -48px;
+    font-family: raleway;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 3px;
+}
+
+input.task-form-button-checkbox {
+    float: left;
+    top: 30.5%;
+    margin-top: 1.px;
+    margin-left: -18px;
+}
+
+

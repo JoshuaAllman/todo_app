@@ -1,33 +1,53 @@
 @extends('layouts.main')
 
-@section('content')
+@section('header')
 
-    <h1>{{ auth()->user() ? auth()->user()->name : 'My' }} Tasks</h1>
-
-    <form action="{{ route('tasks.create') }}" method="post">
+    <li class="task-form" >
+        <form action="{{ route('tasks.create') }}" method="post">
         @csrf 
-        <input name="task">  
+        <input type="text" name="task">  
         @error('task')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
-        <input type="checkbox" name="high_priority" value="1">High Priority<br>
-        <button type="submit">Add Task</button>
+        <button class="add-task-button" type="submit">Add Task</button><br/>
         @error('high_priority')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
+        <label>
+            <input class="task-form-button-checkbox" type="checkbox" name="high_priority" value="1"/>
+            High Priority
+        </label>
     </form>
+    </li>
+
+@endsection
+
+
+@section('content')
+
+    <h1>{{ auth()->user() ? auth()->user()->name : 'My' }} Tasks</h1>
 
     <ul>
         @foreach($tasks as $task)
-          <li>
-             @if($task->high_priority) <strong> @endif
-             {{ $task->title }}
-             @if($task->belongsToUser) : {{ $task->belongsToUser->name }} @endif
-             @if($task->high_priority) </strong> @endif
-        </li>
+            <li>
+                <form class="displayed-task" action="{{ route('tasks.update', $task) }}" method="post">
+                    @method('PUT')
+                    @csrf
+                    @if($task->high_priority) <strong> @endif
+                    @if($task->completed_at) <strike> @endif
+                    {{ $task->title }}
+                    <input type="hidden" name="completed" value="1">
+                    @if(!$task->completed_at)
+                        <button class="complete-task-button" type="submit">Mark Complete</button>
+                    @endif
+                    @if($task->belongsToUser) : {{ $task->belongsToUser->name }} @endif
+                    @if($task->completed_at) </strike> @endif
+                    @if($task->high_priority) </strong> @endif
+                </form>
+            </li>
         @endforeach
     </ul>
 
-
+@endsection
 

@@ -2,8 +2,18 @@
 <html>
 <head>
     <title>Todo</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/site.css') }}">
 </head>
 <body>
-    @yield('content')
+     
+     <ul class="nav-title">
+        @yield('header')
+        <li class="nav-item"><a href="{{ route('logout') }}">Logout</a></li>
+        <li class="nav-item"><a href="/login">Sign In</a></li>
+        <li class="nav-item"><a class="active" href="/register">Create Account</a></li>
+     </ul>
+
+     @yield('content')
+
 </body>
 </html>

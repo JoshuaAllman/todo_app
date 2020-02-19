@@ -13,6 +13,9 @@
 
 Route::get('/', 'TasksController@index')->name('tasks.view');
 Route::post('/', 'TasksController@create')->name('tasks.create');
+Route::put('/{task}', 'TasksController@update')->name('tasks.update');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
 
 Auth::routes();
 
