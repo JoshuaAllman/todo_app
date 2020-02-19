@@ -8,6 +8,11 @@
     border-radius: 5px;
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
 li.nav-item {
     float: right;
     list-style-type: none;

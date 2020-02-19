@@ -12,7 +12,7 @@
 
         <button class="add-task-button" type="submit">Add Task</button><br/>
         @error('high_priority')
-            <div class="alert alert-danger">{{ $message }}</div>
+            <div class="alert alert-danger">{{ 'try again' }}</div>
         @enderror
         <label>
             <input class="task-form-button-checkbox" type="checkbox" name="high_priority" value="1"/>
@@ -36,10 +36,10 @@
                     @csrf
                     @if($task->high_priority) <strong> @endif
                     @if($task->completed_at) <strike> @endif
-                    {{ $task->title }}
+                    {{ ucwords($task->title) }}
                     <input type="hidden" name="completed" value="1">
                     @if(!$task->completed_at)
-                        <button class="complete-task-button" type="submit">Mark Complete</button>
+                        <button class="complete-task-button" type="submit">Complete</button>
                     @endif
                     @if($task->belongsToUser) : {{ $task->belongsToUser->name }} @endif
                     @if($task->completed_at) </strike> @endif
