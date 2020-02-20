@@ -185,6 +185,18 @@ input.task-form-button-checkbox {
 
 div.alert-danger {
     float: right;
+    margin-top: -8px;
+    color: white;
+    margin-left: 20px;
+}
+
+input.form-check-input {
+    margin-left: 52px;
+    margin-bottom: 15px;
+}
+
+a.btn-link{
+    margin-left: 50px;
 }
 
 
