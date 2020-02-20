@@ -183,4 +183,8 @@ input.task-form-button-checkbox {
     margin-left: -18px;
 }
 
+div.alert-danger {
+    float: right;
+}
+
 
