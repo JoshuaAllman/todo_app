@@ -68,7 +68,7 @@ class TasksController extends Controller
             'completed_at' => $request->completed ? now() : null
         ]);
         if ($user = $task->belongsToUser) {
-            if ($user->id !== auth()->id() && $task->high_priority) {
+            if ($user->id !== auth()->id() && $task->high_priority && auth()->check()) {
                 $user->notify(new OtherUserCompletedHighPriorityTask($task, auth()->user()));
             } elseif (($user->id !== auth()->id()) && auth()->check()) {
                 $user->notify(new OtherUserCompletedTask($task, auth()->user()));
