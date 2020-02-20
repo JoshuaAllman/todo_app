@@ -70,7 +70,7 @@ class TasksController extends Controller
         if ($user = $task->belongsToUser) {
             if ($user->id !== auth()->id() && $task->high_priority) {
                 $user->notify(new OtherUserCompletedHighPriorityTask($task, auth()->user()));
-            } elseif ($user->id !== auth()->id()) {
+            } elseif (($user->id !== auth()->id()) && auth()->check()) {
                 $user->notify(new OtherUserCompletedTask($task, auth()->user()));
             }
         }
