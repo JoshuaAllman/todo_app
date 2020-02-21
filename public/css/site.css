@@ -1,11 +1,11 @@
 .nav-title {
     list-style-type: none;
-    margin: 0;
+    margin: -8px;
     padding: 0;
     overflow: hidden;
     background-color: #333;
     margin-bottom: 90px;
-    border-radius: 5px;
+    border-radius: 0;
 }
 
 ul {
@@ -141,7 +141,7 @@ div.card-header {
     height: 200px;
     position: fixed;
     top: 12%;
-    left: 53%;
+    left: 52%;
     margin-left: -100px;
 }
 
@@ -196,8 +196,16 @@ input.form-check-input {
     margin-bottom: 15px;
 }
 
-a.btn-link{
+a.btn-link {
     margin-left: 50px;
+    font-family: raleway;
+    font-size: 14px;
+    color: grey;
+    text-decoration: none;
+}
+
+label.form-check-label {
+    font-family: raleway;
 }
 
 
