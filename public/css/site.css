@@ -111,6 +111,7 @@ input.form-control {
     position: relative;
     left: 26%;
     outline: none;
+    position: relative;
 }
 
 label.col-form-label {
@@ -140,7 +141,7 @@ div.card-header {
     height: 200px;
     position: fixed;
     top: 12%;
-    left: 55%;
+    left: 53%;
     margin-left: -100px;
 }
 
@@ -165,7 +166,7 @@ button.btn {
     height: 50px;
     position: fixed;
     top: 30.5%;
-    left: 45.3%;
+    left: 44.3%;
     margin-top: 290px;
     margin-left: -30px;
     font-family: raleway;
@@ -185,9 +186,9 @@ input.task-form-button-checkbox {
 
 div.alert-danger {
     float: right;
-    margin-top: -8px;
+    margin-top: -11px;
     color: white;
-    margin-left: 20px;
+    margin-left: 19px;
 }
 
 input.form-check-input {
