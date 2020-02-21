@@ -137,12 +137,10 @@ div.card-header {
     font-size: 30px;
     font-family: raleway;
     font-weight: 600;
-    width: 200px;
-    height: 200px;
     position: fixed;
     top: 12%;
     left: 52%;
-    margin-left: -100px;
+    margin-left: -90px;
 }
 
 div.card {
