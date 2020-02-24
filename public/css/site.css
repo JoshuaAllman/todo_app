@@ -210,6 +210,10 @@ a.btn-link {
     text-decoration: none;
 }
 
+a.btn-link:hover {
+    color: #333;
+}
+
 label.form-check-label {
     font-family: raleway;
 }
