@@ -26,7 +26,7 @@
 
 @section('content')
 
-    <h1>{{ auth()->user() ? auth()->user()->name : 'My' }} Tasks</h1>
+    <h1 class="task-owner"> {{ auth()->user() ? auth()->user()->name : 'My' }} Tasks</h1>
 
     <ul>
         @foreach($tasks as $task)

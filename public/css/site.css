@@ -7,6 +7,10 @@
     margin-bottom: 90px;
     border-radius: 0;
 }
+h1.task-owner {
+    font-family: raleway;
+    font-weight: 600;
+}
 
 ul {
     list-style-type: none;
@@ -27,6 +31,7 @@ li.nav-item {
     font-size: 20px;
     letter-spacing: 0.5px;
     margin-right: 20px;
+    font-family: raleway;
 }
 
 .nav-item a:hover {
@@ -62,6 +67,8 @@ li.nav-item {
     float: left;
     margin-top: -26px;
     margin-left: 322px;
+    font-family: raleway;
+    font-size: 15px;
 }
 
 .task-form input[type="text"] {
@@ -85,6 +92,7 @@ li.nav-item {
     width: 100%;
     padding-top: 23px;
     list-style-type: none;
+    font-family: raleway;
 }
 
 .complete-task-button {
@@ -104,7 +112,7 @@ li.nav-item {
 }
 
 input.form-control {
-    margin-bottom: 16px;
+    margin-bottom: 25px;
     margin-top: 7px;
     font-size: 22px;
     text-indent: 15px;
@@ -112,64 +120,62 @@ input.form-control {
     width: 500px;
     height: 41px;
     position: relative;
-    left: 26%;
     outline: none;
-    position: relative;
 }
 
 label.col-form-label {
     color: black;
     font-size: 16px;
     font-family: raleway;
-    font font-weight: initial;
     font-weight: 500;
-    margin-bottom: 16px;
-    font-size: 15px;
     text-indent: 15px;
     letter-spacing: 1px;
     width: 500px;
-    height: 41px;
-    position: relative;
-    left: 26%;
+    margin-top: 30px;
+    margin-right: 30px;
 }
 
-div.card-header {
+header.card-header {
     color: black;
-    padding-bottom: 30px;
     padding-top: 50px;
     font-size: 30px;
     font-family: raleway;
     font-weight: 600;
-    position: fixed;
-    top: 12%;
-    left: 47%;
-    margin-left: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-div.card {
+div.card-header {
+    color: black;
+    font-size: 30px;
+    font-family: raleway;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.card-body {
     padding-top: 50px;
-    right: 104%;
-    width: 200px;
     height: 200px;
-    position: fixed;
-    top: 30%;
-    left: 40%;
-    margin-top: -120px;
-    margin-left: -100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 button.btn {
     color: white;
     background-color: green;
     padding-top: 0px;
-    right: 100%;
     width: 300px;
     height: 50px;
-    position: fixed;
-    top: 30.5%;
-    left: 44.3%;
-    margin-top: 290px;
-    margin-left: -30px;
     font-family: raleway;
     font-weight: 500;
     font-size: 20px;
@@ -177,6 +183,10 @@ button.btn {
     border: none;
     border-radius: 3px;
     outline: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 button.btn:active {
@@ -198,24 +208,40 @@ div.alert-danger {
 }
 
 input.form-check-input {
-    margin-left: 52px;
     margin-bottom: 15px;
 }
 
 a.btn-link {
-    margin-left: 50px;
     font-family: raleway;
     font-size: 14px;
     color: grey;
     text-decoration: none;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: baseline;
+    align-items: center;
+    margin-top: 20px;
 }
 
 a.btn-link:hover {
     color: #333;
 }
 
-label.form-check-label {
-    font-family: raleway;
+span.invalid-feedback {
+    color: red;
+}
+
+button.login-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.register-button {
+    display: flex;
+    flex-direction: row;
+    flex: centre;
+    justify-content: center;
 }
 
 
