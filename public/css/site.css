@@ -29,9 +29,8 @@ li.nav-item {
     margin-right: 20px;
 }
 
-.nav-item:hover {
-    background-color: #555;
-    color: black;
+.nav-item a:hover {
+        background-color: #4e4c4c;
 }
 
 .task-form {
@@ -51,6 +50,11 @@ li.nav-item {
     background-color: green;
     color: white;
     height: 34px;
+    outline: none;
+}
+
+.add-task-button:active {
+    background-color: #07ad07;
 }
 
 .task-form label {
@@ -63,17 +67,15 @@ li.nav-item {
 .task-form input[type="text"] {
     background-color: white;
     width: 190px;
-    height: 20px;
     display: inline-block;
     float: left;
     border-radius: 3px;
-    box-shadow: none;
     padding-bottom: 7px;
     border-style: none;
     font-size: 17px;
     text-indent: 10px;
     padding-top: 7px;
-    margin-bottom: -16px;
+    outline: none;
 }
 
 .displayed-task {
@@ -98,6 +100,7 @@ li.nav-item {
     border-style: none;
     margin-left: 8px;
     list-style: none;
+    outline: none;
 }
 
 input.form-control {
@@ -139,7 +142,7 @@ div.card-header {
     font-weight: 600;
     position: fixed;
     top: 12%;
-    left: 49%;
+    left: 47%;
     margin-left: 10px;
 }
 
@@ -164,7 +167,7 @@ button.btn {
     height: 50px;
     position: fixed;
     top: 30.5%;
-    left: 45.3%;
+    left: 44.3%;
     margin-top: 290px;
     margin-left: -30px;
     font-family: raleway;
@@ -173,6 +176,11 @@ button.btn {
     letter-spacing: 1px;
     border: none;
     border-radius: 3px;
+    outline: none;
+}
+
+button.btn:active {
+    background-color: #07ad07;
 }
 
 input.task-form-button-checkbox {
