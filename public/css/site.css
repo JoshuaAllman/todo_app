@@ -244,4 +244,10 @@ div.register-button {
     justify-content: center;
 }
 
+label.form-check-label {
+    display: inline-flex;
+    font-family: raleway;
+}
+
+
 
