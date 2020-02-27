@@ -144,6 +144,7 @@ header.card-header {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 15px;
 }
 
 div.card-header {
@@ -156,11 +157,10 @@ div.card-header {
 }
 
 .card-body {
-    padding-top: 50px;
-    height: 200px;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 
 .center {
@@ -237,10 +237,15 @@ button.login-button {
     justify-content: center;
 }
 
+div.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 div.register-button {
     display: flex;
     flex-direction: row;
-    flex: centre;
     justify-content: center;
 }
 
@@ -248,6 +253,26 @@ label.form-check-label {
     display: inline-flex;
     font-family: raleway;
 }
+
+span.invalid-feedback {
+    display: flex;
+    margin-top: -21px;
+    margin-bottom: 11px;
+    font-family: raleway;
+    font-size: 14px;
+}
+
+strong.form-group-row {
+    span.invalid-feedback {
+    display: flex;
+    margin-top: -21px;
+    margin-bottom: 11px;
+    font-family: raleway;
+    font-size: 14px;
+}
+}
+
+
 
 
 
