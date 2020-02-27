@@ -8,9 +8,13 @@
      
      <ul class="nav-title">
         @yield('header')
-        <li class="nav-item"><a href="{{ route('logout') }}">Logout</a></li>
-        <li class="nav-item"><a href="/login">Sign In</a></li>
-        <li class="nav-item"><a class="active" href="/register">Create Account</a></li>
+        @guest
+            <li class="nav-item"><a href="/login">Sign In</a></li>
+            <li class="nav-item"><a class="active" href="/register">Create Account</a></li>
+        @else
+            <li class="nav-item"><a href="{{ route('logout') }}">Logout</a></li>
+        @endguest
+        <li class="nav-item"><a class="active" href="/">Home</a></li>
      </ul>
 
      @yield('content')
