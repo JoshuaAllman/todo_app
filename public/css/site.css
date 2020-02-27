@@ -263,16 +263,10 @@ span.invalid-feedback {
 }
 
 strong.form-group-row {
-    span.invalid-feedback {
     display: flex;
     margin-top: -21px;
     margin-bottom: 11px;
     font-family: raleway;
     font-size: 14px;
 }
-}
-
-
-
-
 
