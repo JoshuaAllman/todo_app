@@ -16,8 +16,9 @@
         @endguest
         <li class="nav-item"><a class="active" href="/">Home</a></li>
      </ul>
-
-     @yield('content')
+    <div class="content">
+        @yield('content')
+    </div>
 
 </body>
 </html>
