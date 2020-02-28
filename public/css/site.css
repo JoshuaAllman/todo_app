@@ -1,12 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .nav-title {
     list-style-type: none;
-    margin: -8px;
+    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    margin-bottom: 90px;
     border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
+
+div.content {
+    margin-top: 90px;
+}
+
 h1.task-owner {
     font-family: raleway;
     font-weight: 600;
@@ -35,7 +48,7 @@ li.nav-item {
 }
 
 .nav-item a:hover {
-        background-color: #4e4c4c;
+    background-color: #4e4c4c;
 }
 
 .task-form {
@@ -86,7 +99,8 @@ li.nav-item {
 }
 
 .displayed-task {
-    float: left;
+    display: flex;
+    justify-content: flex-start;
     color: black;
     background-color: white;
     width: 100%;
