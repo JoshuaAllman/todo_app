@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    margin-top: 125px;
     padding: 0;
 }
 
@@ -197,7 +198,7 @@ button.btn {
     border: none;
     border-radius: 3px;
     outline: none;
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -219,10 +220,6 @@ div.alert-danger {
     margin-top: -11px;
     color: white;
     margin-left: 19px;
-}
-
-input.form-check-input {
-    margin-bottom: 15px;
 }
 
 a.btn-link {
@@ -264,8 +261,20 @@ div.register-button {
 }
 
 label.form-check-label {
-    display: inline-flex;
+    display: flex;
     font-family: raleway;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: -31px;
+}
+
+input.form-check-input {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: -10px;
 }
 
 span.invalid-feedback {
@@ -284,3 +293,25 @@ strong.form-group-row {
     font-size: 14px;
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    /* background-color: #333; */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+}
+
+p.creator {
+    color: black;
+    letter-spacing: 1px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
