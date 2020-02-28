@@ -24,6 +24,7 @@ div.content {
 h1.task-owner {
     font-family: raleway;
     font-weight: 600;
+    margin-left: 15px;
 }
 
 ul {
