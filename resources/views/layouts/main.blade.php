@@ -20,5 +20,9 @@
         @yield('content')
     </div>
 
+    <footer class="footer">
+        <p class="creator">All rights reserved © Joshua Allman</p>
+    </footer>
+
 </body>
 </html>
