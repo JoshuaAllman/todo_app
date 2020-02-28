@@ -2,7 +2,7 @@
 
 @section('header')
 
-    <li class="task-form" >
+    <li class="task-form">
         <form action="{{ route('tasks.create') }}" method="post">
         @csrf 
         <input type="text" name="task">  
