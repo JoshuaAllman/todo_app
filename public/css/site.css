@@ -317,16 +317,3 @@ p.creator {
     font-weight: lighter;
 }
 
-.frank {
-    color: blue;
-    display: flex;
-    justify-content: center;
-}
-
-.bob {
-    color: green;
-}
-
-.goldie-locks {
-    color: yellow;
-}
