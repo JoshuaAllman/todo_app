@@ -14,7 +14,8 @@
         @else
             <li class="nav-item"><a href="{{ route('logout') }}">Logout</a></li>
         @endguest
-        <li class="nav-item"><a class="active" href="/">Home</a></li>
+            <li class="nav-item"><a class="active" href="/about">About</a></li>
+            <li class="nav-item"><a class="active" href="/">Home</a></li>
      </ul>
     <div class="content">
         @yield('content')
