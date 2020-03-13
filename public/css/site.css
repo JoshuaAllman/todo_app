@@ -345,6 +345,21 @@ img.about-image {
     width: 50%;
 }
 
+.fa {
+    display: flex;
+    justify-content: center;
+}
+
+i.fa-instagram {
+  color: #C13584;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+
+
 
 
 
