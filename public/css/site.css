@@ -127,6 +127,10 @@ li.nav-item {
     outline: none;
 }
 
+.complete-task-button:active {
+    background-color: #07ad07;
+}
+
 input.form-control {
     margin-bottom: 25px;
     margin-top: 7px;
@@ -259,6 +263,7 @@ div.register-button {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 10px;
 }
 
 label.form-check-label {
