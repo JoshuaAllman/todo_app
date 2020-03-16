@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Middleware;
-// require \App\Http\Middleware\HoneyBot::class
 
+// use \App\Http\Middleware\HoneyBot::class
 use Closure;
 
 class HoneyBot
