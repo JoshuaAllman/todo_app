@@ -28,13 +28,13 @@
 	</p>	
 
 <div class="social-container">
-    <a href="https://www.instagram.com/rhetoricality/">
+    <a href="https://www.instagram.com/rhetoricality/" target="_blank">
 	   <i class="fa fa-instagram"></i>
     </a>
-    <a href="https://twitter.com/Prepsody">
+    <a href="https://twitter.com/Prepsody" target="_blank">
         <i class="fa fa-twitter"></i>
     </a>
-    <a href="https://github.com/JoshuaAllman/">
+    <a href="https://github.com/JoshuaAllman/" target="_blank">
         <i class="fa fa-github-alt"></i>
     </a>
 </div>
