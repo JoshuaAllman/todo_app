@@ -28,8 +28,10 @@
 	<p class="about">My Name is Joshua Allman, I am 19 years of age and currently participating in an apprenticeship with a company called Purple Mountain.  This is the first application that I have built, and I hope to add to it throughout the future. It is an application for managing tasks, where users can create and complete any number of tasks as they wish. 
 	</p>	
 
-	<i class="fa fa-instagram"> 
-
+	<i onclick="window.location.href = 'https://www.instagram.com/rhetoricality/';" class="fa fa-instagram">
+    <i onclick="window.location.href = 'https://twitter.com/Prepsody';" class="fa fa-twitter">
+    <i onclick="window.location.href = 'https://github.com/JoshuaAllman/';" class="fa fa-github-alt">
+        
     <footer class="footer">
         <p class="creator">All rights reserved © Joshua Allman</p>
     </footer>
