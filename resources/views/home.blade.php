@@ -4,25 +4,24 @@
 
     <li class="task-form">
         <form autocomplete="off" action="{{ route('tasks.create') }}" method="post">
-        @csrf 
-        <input type="text" name="task">  
-        @error('task')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
-        <button class="add-task-button" type="submit">Add Task</button><br/>
-        @error('high_priority')
-            <div class="alert alert-danger">{{ 'try again' }}</div>
-        @enderror
-        <label>
-            <input class="task-form-button-checkbox" type="checkbox" name="high_priority" value="1"/>
-            High Priority
-        </label>
-    </form>
+            @csrf 
+            <input type="text" name="task">  
+            @error('task')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            
+            <button class="add-task-button" type="submit">Add Task</button><br/>
+            @error('high_priority')
+                <div class="alert alert-danger">{{ 'try again' }}</div>
+            @enderror
+            <label>
+                <input class="task-form-button-checkbox" type="checkbox" name="high_priority" value="1"/>
+                High Priority
+            </label>
+        </form>
     </li>
 
 @endsection
-
 
 @section('content')
 
