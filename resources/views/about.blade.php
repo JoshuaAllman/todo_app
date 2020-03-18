@@ -7,16 +7,16 @@
 </head>
 
 <ul class="nav-title">
-        @yield('header')
+    @yield('header')
         @guest
             <li class="nav-item"><a href="/login">Sign In</a></li>
             <li class="nav-item"><a class="active" href="/register">Create Account</a></li>
-        @else
+            @else
             <li class="nav-item"><a href="{{ route('logout') }}">Logout</a></li>
-        @endguest
+            @endguest
             <li class="nav-item"><a class="active" href="/about">About</a></li>
             <li class="nav-item"><a class="active" href="/">Home</a></li>
-     </ul>
+        </ul>
     <div class="content">
         @yield('content')
     </div>
