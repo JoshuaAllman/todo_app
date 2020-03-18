@@ -6,7 +6,7 @@
 </head>
 <body>
      
-     <ul class="nav-title">
+    <ul class="nav-title">
         @yield('header')
         @guest
             <li class="nav-item"><a href="/login">Sign In</a></li>
@@ -16,7 +16,7 @@
         @endguest
             <li class="nav-item"><a class="active" href="/about">About</a></li>
             <li class="nav-item"><a class="active" href="/">Home</a></li>
-     </ul>
+    </ul>
     <div class="content">
         @yield('content')
     </div>
