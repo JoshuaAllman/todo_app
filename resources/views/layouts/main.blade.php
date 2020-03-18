@@ -3,6 +3,7 @@
 <head>
     <title>Todo</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/site.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
 </head>
 <body>
      
@@ -17,6 +18,7 @@
             <li class="nav-item"><a class="active" href="/about">About</a></li>
             <li class="nav-item"><a class="active" href="/">Home</a></li>
     </ul>
+
     <div class="content">
         @yield('content')
     </div>
