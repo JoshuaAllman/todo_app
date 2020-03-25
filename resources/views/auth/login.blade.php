@@ -3,9 +3,8 @@
 @section('content')
 
 <div class="container">
-    <header class="card-header">{{ __('Login') }}</header>
-
     <main class="card-body">
+        <header class="card-header">{{ __('Login') }}</header>
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -17,7 +16,7 @@
 
                     @error('email')
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong
+                            <strong>{{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
@@ -54,7 +53,6 @@
                     <button type="submit" class="btn btn-primary">
                         {{ __('Login') }}
                     </button>
-
                     @if (Route::has('password.request'))
                         <a class="btn btn-link" href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}

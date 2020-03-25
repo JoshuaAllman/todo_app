@@ -20,7 +20,9 @@ class TasksController extends Controller
     {
         $tasks = Task::where('completed_at', '>', now()->subSeconds(60 * 10))
             ->orWhereNull('completed_at')
+            // ->take(5)
             ->get();
+            $tasks = $tasks->reverse();
         return view('home', [ 
             'tasks' => $tasks
         ]);
@@ -74,6 +76,20 @@ class TasksController extends Controller
                 $user->notify(new OtherUserCompletedTask($task, auth()->user()));
             }
         }
+        return redirect()->back();
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  App\Task  $task
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Request $request, Task $task)
+    {
+        $task = Task::findOrFail($task->id);
+        $task->delete();
+
         return redirect()->back();
     }
 }
