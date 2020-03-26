@@ -13,10 +13,10 @@
             </thead>
 
             @foreach($tasks as $task)   
-                <tr>	
+                <tr id="item_row">	
                     <td>{{ $task->id }}</td>
                     <form class="displayed-task" action="{{ route('tasks.update', $task) }}" method="post">
-                    <td>
+                    <td id="items">
                         @method('PUT')
                         @csrf
                         @if($task->completed_at) <strike> @endif

@@ -64,6 +64,28 @@
         // modal.style.display = 'none';
         modal.style.visibility = 'hidden';
     });
+
+
+    
+    function searchFilter() {
+        var items, item_row, item_input, filter, txtValue, i;
+        item_input = document.getElementById("item_input");
+
+        filter = item_input.value.toUpperCase();
+        item_row = document.getElementById("item_row");
+        items = document.getElementById("items");
+        for (i = 0; i < items.length; i++) {
+            txtValue = items.textContent || items.innerText || items.innerHTML;
+                    console.log('derp');
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            //     item_row[i].style.display = "";
+                    console.log('hello');
+            } else {
+                        console.log('world');
+            //     item_row[i].style.display = "none";
+            }
+        }
+    }
 </script>
 </body>
 </html>
