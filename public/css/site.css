@@ -16,6 +16,7 @@ body {
 .scroll-window {
     display: block;
     overflow-y: auto;
+    z-index: 5;
     height: 640px;
 }
 
