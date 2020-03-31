@@ -14,7 +14,7 @@
                 <ul class="nav-title">
                     @guest
                     <li class="nav-item"><a class="" href="/"><i id="user" class="fa fa-home"></i>Home</a></li>
-                    <li class="nav-item"><a class="" href="/about"><i class="fa fa-bookmark" id="user"></i>About</a></li>
+                    <li class="nav-item"><a class="" href="/about"><i id="user" class="fa fa-envelope"></i></i>Contact</a></li>
                     <li class="nav-item"><a class="" href="/register"><i id="user" class="fa fa-user-plus"></i>Create Account</a>
                     <li class="nav-item"><a href="/login" id="login"><i class="fa fa-user" id="user"></i>Sign In</a></li></li>
                         @else
@@ -24,18 +24,18 @@
                     @endguest
                 </ul>
                 <div id="socials">
-                <a href="https://www.instagram.com/rhetoricality/" target="_blank">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="https://twitter.com/Prepsody" target="_blank">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="https://github.com/JoshuaAllman/" target="_blank">
-                    <i class="fa fa-github-alt"></i>
-                </a>
+                    <a href="https://www.instagram.com/rhetoricality/" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/Prepsody" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://github.com/JoshuaAllman/" target="_blank">
+                        <i class="fa fa-github-alt"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </div> 
+        </div> 
 
         <div class="body-port">
             <div class="content">
@@ -49,43 +49,64 @@
         </footer> -->
     </div>
 </div>
-
 <script>
+    //create task modal
     var modal = document.querySelector('.modal-card');
     var btn = document.querySelector('.modal-cross');
     var newTask = document.querySelector('.search-button');
+    var container = document.querySelector('.modal-seperator');
+    var delete_modal = document.querySelector('.delete-card');
+    var delete_button = document.querySelector('.confirm-delete');
+    var cancel_del = document.querySelector('.cancel-delete');
+    var content_seperator = document.getElementById('.content-seperator');
 
     newTask.addEventListener('click', function() {
         // modal.style.display = 'block';
         modal.style.visibility = 'visible';
+        container.style.visibility = 'visible';
+        container.style.height = '100%';
+        container.style.padding = '0 45px 45px 45px';
     });
+
+    function deleteModalOpener(main_del_button, event) {
+        // modal.style.display = 'block';
+        modal.style.visibility = 'visible';
+        delete_modal.style.visibility = 'visible';
+        delete_modal.style.height = '100%';
+        content_seperator.style.padding = '0 45px 45px 45px';
+    }
 
     btn.addEventListener('click', function() {
         // modal.style.display = 'none';
         modal.style.visibility = 'hidden';
+        if (container.style.visibility == 'visible') {
+         container.style.visibility = 'hidden';
+         container.style.height = '0';
+         container.style.padding = '0';
+        } else if (delete_modal.style.visibility == 'visible') {
+            delete_modal.style.visibility = 'hidden';
+        }
     });
 
 
-    
     function searchFilter() {
-        var items, item_row, item_input, filter, txtValue, i;
-        item_input = document.getElementById("item_input");
-
-        filter = item_input.value.toUpperCase();
-        item_row = document.getElementById("item_row");
-        items = document.getElementById("items");
-        for (i = 0; i < items.length; i++) {
-            txtValue = items.textContent || items.innerText || items.innerHTML;
-                    console.log('derp');
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            //     item_row[i].style.display = "";
-                    console.log('hello');
-            } else {
-                        console.log('world');
-            //     item_row[i].style.display = "none";
-            }
-        }
-    }
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
 </script>
 </body>
 </html>

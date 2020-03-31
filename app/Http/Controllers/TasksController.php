@@ -82,6 +82,7 @@ class TasksController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param \Illuminate\Http\Request $request
      * @param  App\Task  $task
      * @return \Illuminate\Http\Response
      */
