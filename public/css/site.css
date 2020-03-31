@@ -71,13 +71,41 @@ thead tr {
     position: sticky;
     top: 0;
     z-index: 2;
-    padding-right: 25px;
+ /*   padding-right: 25px;*/
+}
+
+#owner-row {
+    width: 163px;
 }
 
 .content-ul {
 /*  border: 1px red solid;*/
   border-collapse: separate;
   border-spacing: 0;
+}
+
+#id-row {
+    width: 65px;
+}
+
+#title-row {
+    width: 724px;
+}
+
+#published-row {
+    width: 155px;
+}
+
+#hp-row {
+    width: 136px;
+}
+
+#action-row {
+    width: 125px;
+}
+
+ tr {
+    width: auto;
 }
 
 .content-ul td {
@@ -91,7 +119,7 @@ thead tr {
   color: #262626;
 }
 
-.content-ul, .content-ul tr {
+.content-ul, .content-ul  {
     border-bottom: 1px #e4e5e6 solid;
     width: 100%;
 }
@@ -152,18 +180,18 @@ h3.task-owner {
 
 .add-task-button {
     width: 85px;
-    font-size: 13px;
+    font-size: 14px;
     border: 0px;
     border-radius: 0 3px 3px 0;
     cursor: pointer;
-    background-color: green;
+    background-color: #3E79FF;
     color: white;
     height: 35px;
     outline: none;
 }
 
 .add-task-button:active {
-    background-color: #07ad07;
+    background-color: #2354c4;
 }
 
 button.search-button {
@@ -287,7 +315,7 @@ input.form-control {
     border-radius: 3px;
 }
 
-label.col-form-label {
+.col-form-label {
     color: #0b46cc;
     font-size: 16px;
     font-family: raleway;
@@ -295,13 +323,24 @@ label.col-form-label {
     text-indent: 15px;
 }
 
-header.card-header {
+p.col-form-label {
+    text-indent: 0;
+}
+
+.card-header {
     color: #3E79FF;
     font-size: 30px;
     font-family: raleway;
     font-weight: 600;
     text-align: center;
     margin-bottom: 35px;
+}
+
+h3.card-header {
+    font-family: sans-serif;
+    font-weight: 600;
+    color: red;
+    text-align: center;
 }
 
 div.card-header {
@@ -504,6 +543,7 @@ img.about-image {
 /*    background-color: #F6F8FF;*/
     margin: 5% auto 15% auto;
     border-radius: 5px;
+    z-index: 4;
 }
 
 .card-body {
@@ -532,8 +572,10 @@ button.modal-cross:active {
 }
 
 div.modal-seperator {
-   padding: 0 45px 45px 45px;
+   padding: 0;
    text-align: left;
+   visibility: hidden;
+   height: 0;
 }
 
 .option-buttons {
@@ -589,6 +631,50 @@ div.modal-seperator {
   left: 32px;
 }
 
+.delete-card {
+    visibility: hidden;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.dm-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px #e4e5e6 solid;
+}
+
+.dm-buttons button {
+   flex: 5; 
+    padding: 15px 30px;
+    font-size: 15px;
+    border: none;
+}
+
+.content-seperator {
+    padding: 0;
+}
+
+.confirm-delete {
+    border-radius: 0 0 5px 0;
+    color: white;
+}
+
+.confirm-delete {
+    background-color: #fe3f61;
+}
+
+.confirm-delete:active {
+    background-color: #fc385b;
+}
+
+.cancel-delete {
+    color: black;
+    border-radius: 0 0 0 5px;
+    background-color: #F6F8FF;
+}
 
 
 
