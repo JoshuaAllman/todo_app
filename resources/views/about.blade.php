@@ -1,12 +1,52 @@
 @extends('layouts.main')
 
+@section('header')
+
 @section('content')
 
-<h1 class="about">About</h1>
-<img class="about-image" src="https://bit.ly/2W9kVp9" width="400" height="400">
+<div class="container">
+    <header class="card-header">Contact Us</header>
 
-<p class="about">My Name is Joshua Allman, I am 19 years of age and currently participating in an apprenticeship with a company called Purple Mountain.  This is the first application that I have built, and I hope to add to it throughout the future. It is an application for managing tasks, where users can create and complete any number of tasks as they wish. 
-</p>	
+    <main class="card-body">
+        <form method="POST" action="">
+            @csrf
+
+            <div class="form-group row">
+                <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
+                <div class="register-form">
+                    <input id="name" placeholder="Name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                <div class="register-form">
+                    <input id="email" placeholder="E-mail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">Subject</label>
+                <div class="register-form">
+                    <input id="password" placeholder="Password" type="password" oncopy="return false" onpaste="return false" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                </div>
+            </div>
+
+            <div class="form-group.row">
+                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Message</label>
+                <div class="register-form">
+                    <textarea class="input-form-message"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="register-button offset-md-4">
+                    <button type="submit" class="contact-submit-button">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </main>
+</div>
 @endsection
-
-
