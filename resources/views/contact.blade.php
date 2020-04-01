@@ -10,7 +10,6 @@
     <main class="card-body">
         <form method="POST" action="">
             @csrf
-
             <div class="form-group row">
                 <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
                 <div class="register-form">
@@ -32,7 +31,7 @@
                 </div>
             </div>
 
-            <div class="form-group.row">
+            <div class="form-group row">
                 <label class="col-md-4 col-form-label text-md-right">Message</label>
                 <div class="register-form">
                     <textarea placeholder="Type here..." class="input-form-message"></textarea>
