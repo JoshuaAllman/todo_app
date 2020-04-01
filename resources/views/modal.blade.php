@@ -30,6 +30,7 @@
                         <h3 class="card-header">Warning!</h3>
                         <p class="col-form-label">Are you sure you wish to delete this task?</p>
                     </div>
+                </div>
 
                 @foreach($tasks as $task)
                 @if ($task->id == $loop->iteration)
