@@ -188,6 +188,7 @@ h3.task-owner {
     color: white;
     height: 35px;
     outline: none;
+    margin-left: -3px;
 }
 
 .add-task-button:active {
