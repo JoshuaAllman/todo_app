@@ -14,7 +14,7 @@
                 <ul class="nav-title">
                     @guest
                     <li class="nav-item"><a class="" href="/"><i id="user" class="fa fa-home"></i>Home</a></li>
-                    <li class="nav-item"><a class="" href="/about"><i id="user" class="fa fa-envelope"></i></i>Contact</a></li>
+                    <li class="nav-item"><a class="" href="/contact"><i id="user" class="fa fa-envelope"></i></i>Contact</a></li>
                     <li class="nav-item"><a class="" href="/register"><i id="user" class="fa fa-user-plus"></i>Create Account</a>
                     <li class="nav-item"><a href="/login" id="login"><i class="fa fa-user" id="user"></i>Sign In</a></li></li>
                         @else

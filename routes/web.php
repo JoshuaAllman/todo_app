@@ -17,8 +17,8 @@ Route::put('/{task}', 'TasksController@update')->name('tasks.update');
 Route::delete('/{task}', 'TasksController@destroy')->name('tasks.destroy');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/about', 'Auth\LoginController@logout')->name('about');
-Route::get('/about', function () {
-    return view('about');
+Route::get('/contact', function () {
+    return view('contact');
 });
 
 
